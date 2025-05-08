@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       {/* Navigation bar */}
-      <nav className="bg-navy-blue py-4 px-6 text-white">
+      <nav className="sticky top-0 w-full bg-navy-blue py-4 px-6 text-white z-50">
         <div className="flex justify-between items-center">
           {/* Desktop nav links */}
           <div className="hidden md:flex space-x-8">
