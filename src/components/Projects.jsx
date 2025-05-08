@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Projects = () => (
-  <section className="my-8">
+  <section className="my-8 text-white">
     <h2 className="text-2xl font-semibold mb-2">Projects</h2>
     <ul className="list-disc list-inside">
       <li>Project 1 - A brief description</li>

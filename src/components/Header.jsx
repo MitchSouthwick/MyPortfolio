@@ -14,8 +14,8 @@ const Header = () => {
           {/* Desktop nav links */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="hover:text-gray-400">Home</Link>
-            <Link to="/about" className="hover:text-gray-400">About</Link>
-            <Link to="/contact" className="hover:text-gray-400">Contact</Link>
+            <a href="#about" className="hover:text-gray-400">About</a>
+            <a href="#contact" className="hover:text-gray-400">Contact</a>
             <Link to="/resume" className="hover:text-gray-400">Resume</Link>
           </div>
 
@@ -29,8 +29,8 @@ const Header = () => {
         {isOpen && (
           <div className="flex flex-col mt-4 space-y-3 md:hidden">
             <Link to="/" onClick={toggleMenu} className="hover:text-gray-400">Home</Link>
-            <Link to="/about" onClick={toggleMenu} className="hover:text-gray-400">About</Link>
-            <Link to="/contact" onClick={toggleMenu} className="hover:text-gray-400">Contact</Link>
+            <a href="#about" onClick={toggleMenu} className="hover:text-gray-400">About</a>
+            <a href="#contact" onClick={toggleMenu} className="hover:text-gray-400">Contact</a>
             <Link to="/resume" onClick={toggleMenu} className="hover:text-gray-400">Resume</Link>
           </div>
         )}
