@@ -1,47 +1,42 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react'; // Icon library
 
-const Header = () => (
-  <>
-    <header className="bg-blue-600 text-white p-6 flex justify-between items-center">
-      {/* Header section with name and subtitle */}
-      <div>
-        <h1 className="text-3xl font-bold">Mitchell Southwick</h1>
-        <p className="text-lg">Developer | Designer | Creator | Father       </p>
-      </div>
-    </header>
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-    {/* Navigation bar below header */}
-    <nav className="bg-blue-900 py-4 flex justify-between items-center">
-      <div className="container mx-7 space-x-8 text-white">
-        <Link to="/" className="hover:text-gray-300">Home</Link>
-        <Link to="/about" className="hover:text-gray-300">About</Link>
-        {/* <Link to="/projects" className="hover:text-gray-300">Projects</Link> */}
-        <Link to="/contact" className="hover:text-gray-300">Contact</Link>
-        <Link to="/resume" className="hover:text-gray-300">Resume</Link>
-      </div>
-    </nav>
-  </>
-)
+  return (
+    <>
+      {/* Navigation bar */}
+      <nav className="bg-navy-blue py-4 px-6 text-white">
+        <div className="flex justify-between items-center">
+          {/* Desktop nav links */}
+          <div className="hidden md:flex space-x-8">
+            <Link to="/" className="hover:text-gray-400">Home</Link>
+            <Link to="/about" className="hover:text-gray-400">About</Link>
+            <Link to="/contact" className="hover:text-gray-400">Contact</Link>
+            <Link to="/resume" className="hover:text-gray-400">Resume</Link>
+          </div>
 
-export default Header
+          {/* Hamburger Icon */}
+          <button onClick={toggleMenu} className="md:hidden">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
 
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="flex flex-col mt-4 space-y-3 md:hidden">
+            <Link to="/" onClick={toggleMenu} className="hover:text-gray-400">Home</Link>
+            <Link to="/about" onClick={toggleMenu} className="hover:text-gray-400">About</Link>
+            <Link to="/contact" onClick={toggleMenu} className="hover:text-gray-400">Contact</Link>
+            <Link to="/resume" onClick={toggleMenu} className="hover:text-gray-400">Resume</Link>
+          </div>
+        )}
+      </nav>
+    </>
+  );
+};
 
-
-/* import { Link } from 'react-router-dom'
-
-const Header = () => (
-  <header className="bg-blue-600 text-white p-6 flex justify-between items-center">
-    <div>    <h1 className="text-3xl font-bold">Mitchell Southwick</h1><nav className="space-x-4">
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
-    </div>
-    <p className="text-lg">Developer | Designer | Creator</p>
-
-    <div></div>
-  </header>
-)
-
-export default Header */
+export default Header;

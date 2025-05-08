@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'deep-night': '#040f1f',
+        'navy-blue': '#081e3e'
+      }
+    },
   },
   plugins: [],
 }

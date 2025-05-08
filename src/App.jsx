@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="px-4 max-w-4xl mx-auto">
+      <main className="px-20 mx-auto my-14">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
