@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../assets/TempPhoto.jfif'; // Make sure you have this image in src/assets
+import profileImage from '../assets/ProfilePicture.jpg'; // Make sure you have this image in src/assets
 
 const About = () => (
   <section className="my-12 text-white px-4 md:px-0">
