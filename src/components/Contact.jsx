@@ -1,10 +1,87 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
-const Contact = () => (
-  <section className="my-8 text-white bg-navy-blue text-white font-semibold rounded-lg px-4 py-2 inline-block mb-4 shadow-sm">
-    <h2 className="text-3xl font-semibold mb-2">Contact</h2>
-    <p className='text-md'>Email: southwickmitch@gmail.com</p>
-  </section>
-)
+const Contact = () => {
+  const form = useRef();
+  const [sent, setSent] = useState(false);
 
-export default Contact
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_3hjt94e', // Replace with your EmailJS service ID
+        'your_template_id', // Replace with your EmailJS template ID
+        form.current,
+        'your_public_key'   // Replace with your EmailJS public key
+      )
+      .then(() => {
+        setSent(true);
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+      });
+  };
+
+  return (
+    <section
+      id="contact"
+      className="my-8 text-white bg-charcoal-slate rounded-lg px-6 py-8 shadow-md max-w-3xl mx-auto"
+    >
+      <h2 className="text-3xl font-semibold mb-4 text-center">Contact Me</h2>
+
+      {sent && <p className="text-green-400 mb-4 text-center">Message sent! Thanks for reaching out.</p>}
+
+      <form ref={form} onSubmit={sendEmail} className="space-y-4">
+        <div>
+          <label className="block mb-1" htmlFor="user_name">
+            Name
+          </label>
+          <input
+            type="text"
+            id="user_name"
+            name="user_name"
+            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-sky-600"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1" htmlFor="user_email">
+            Email
+          </label>
+          <input
+            type="email"
+            id="user_email"
+            name="user_email"
+            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-sky-600"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-sky-600"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-sky-600 hover:bg-sky-500 transition px-6 py-2 rounded text-white font-medium"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+  );
+};
+
+export default Contact;
