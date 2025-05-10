@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './components/About'
-import Projects from './components/Projects'
+import Experiences from './components/Experiences'
+// import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ResumePage from './pages/ResumePage'
-import Footer from './components/Footer' // ✅ Make sure this import is here
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         <div id="about">
           <About />
         </div>
+        <div>
+          <Experiences />
+        </div>
         {/* <div>
           <Projects />
         </div> */}
@@ -29,7 +33,7 @@ function App() {
         </div>
       </main>
       
-      <Footer /> {/* ✅ Correct usage */}
+      <Footer />
     </Router>
   )
 }

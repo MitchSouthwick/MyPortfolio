@@ -8,7 +8,8 @@ export default {
         'navy-blue': '#081e3e',
         'gunmetal-gray': '#334155',
         'midnight-teal': '#0f172a',
-        'charcoal-slate': '#1e293b'
+        'charcoal-slate': '#1e293b',
+        'indigo-steel': '#4338ca',
       }
     },
   },
