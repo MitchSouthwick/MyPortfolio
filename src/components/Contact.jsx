@@ -11,9 +11,9 @@ const Contact = () => {
     emailjs
       .sendForm(
         'service_3hjt94e', // Replace with your EmailJS service ID
-        'your_template_id', // Replace with your EmailJS template ID
+        'template_qxk373j', // Replace with your EmailJS template ID
         form.current,
-        'your_public_key'   // Replace with your EmailJS public key
+        'Nhqwur1JyX-mz74LD'   // Replace with your EmailJS public key
       )
       .then(() => {
         setSent(true);
@@ -43,7 +43,7 @@ const Contact = () => {
             id="user_name"
             name="user_name"
             required
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-sky-600"
+            className="w-full px-4 py-2 rounded bg-midnight-teal text-green-400 focus:outline-none focus:ring-2 focus:ring-sky-600"
           />
         </div>
 
@@ -56,7 +56,7 @@ const Contact = () => {
             id="user_email"
             name="user_email"
             required
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-sky-600"
+            className="w-full px-4 py-2 rounded bg-midnight-teal text-green-400 focus:outline-none focus:ring-2 focus:ring-sky-600"
           />
         </div>
 
@@ -69,7 +69,7 @@ const Contact = () => {
             name="message"
             rows="5"
             required
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-sky-600"
+            className="w-full px-4 py-2 rounded bg-midnight-teal text-green-400 focus:outline-none focus:ring-2 focus:ring-sky-600"
           ></textarea>
         </div>
 
