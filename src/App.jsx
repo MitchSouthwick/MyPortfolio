@@ -6,7 +6,8 @@ import Home from './pages/Home'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-import ResumePage from './pages/ResumePage'; // adjust path as needed
+import ResumePage from './pages/ResumePage'
+import Footer from './components/Footer' // ✅ Make sure this import is here
 
 function App() {
   return (
@@ -20,16 +21,17 @@ function App() {
         <div id="about">
           <About />
         </div>
-{/*         <div>
+        {/* <div>
           <Projects />
         </div> */}
         <div id="contact">
           <Contact />
         </div>
       </main>
+      
+      <Footer /> {/* ✅ Correct usage */}
     </Router>
   )
 }
 
 export default App
-
