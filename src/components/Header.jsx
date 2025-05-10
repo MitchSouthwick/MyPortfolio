@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Mail, Github, Linkedin } from 'lucide-react';
+import { Menu, X, FileText} from 'lucide-react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,36 +15,17 @@ const Header = () => {
           <Link to="/" className="hover:text-gray-400">Home</Link>
           <a href="#about" className="hover:text-gray-400">About</a>
           <a href="#contact" className="hover:text-gray-400">Contact</a>
-          <Link to="/resume" className="hover:text-gray-400">Resume</Link>
         </div>
 
         {/* Action icon buttons */}
         <div className="hidden md:flex space-x-4">
-          <a
-            href="mailto:southwickmitch@gmail.com"
-            className="bg-teal-600 px-3 py-1 rounded hover:bg-teal-500 text-white"
-            title="Email"
+          <Link
+            to="/resume"
+            className="flex items-center space-x-2 px-3 py-1 rounded bg-sky-600 hover:bg-sky-500 text-white"
           >
-            <Mail size={20} />
-          </a>
-          <a
-            href="https://github.com/MitchSouthwick"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-800 px-3 py-1 rounded hover:bg-gray-700 text-white"
-            title="GitHub"
-          >
-            <Github size={20} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mitchsouthwick-55m22g/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-700 px-3 py-1 rounded hover:bg-blue-600 text-white"
-            title="LinkedIn"
-          >
-            <Linkedin size={20} />
-          </a>
+            <FileText size={20} />
+            <span>Resume</span>
+          </Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -60,9 +42,9 @@ const Header = () => {
           <a href="#contact" onClick={toggleMenu} className="hover:text-gray-400">Contact</a>
           <Link to="/resume" onClick={toggleMenu} className="hover:text-gray-400">Resume</Link>
           <div className="flex space-x-4 mt-2">
-            <a href="mailto:your.email@example.com" className="hover:text-teal-400" title="Email"><Mail size={20} /></a>
-            <a href="https://github.com/YourGitHubUsername" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" title="GitHub"><Github size={20} /></a>
-            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400" title="LinkedIn"><Linkedin size={20} /></a>
+            <a href="mailto:your.email@example.com" className="hover:text-teal-400" title="Email"><FaEnvelope size={20} /></a>
+            <a href="https://github.com/YourGitHubUsername" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" title="GitHub"><FaGithub size={20} /></a>
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400" title="LinkedIn"><FaLinkedin size={20} /></a>
           </div>
         </div>
       )}

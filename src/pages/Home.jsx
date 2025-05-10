@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 
 const roles = ['Developer', 'Creator', 'Lifelong Learner', 'Father'];
 
@@ -34,6 +36,34 @@ const Home = () => {
         I am a <span className="text-teal-400">{text}</span>
         <span className="animate-blink">|</span>
       </p>
+      {/* Action icon buttons */}
+      <div className="flex space-x-4 p-4">
+        <a
+          href="mailto:southwickmitch@gmail.com"
+          className="bg-teal-600 px-3 py-1 rounded hover:bg-teal-500 text-white"
+          title="Email"
+        >
+          <FaEnvelope size={20} />
+        </a>
+        <a
+          href="https://github.com/MitchSouthwick"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-800 px-3 py-1 rounded hover:bg-gray-700 text-white"
+          title="GitHub"
+        >
+          <FaGithub size={20} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mitchsouthwick-55m22g/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-700 px-3 py-1 rounded hover:bg-blue-600 text-white"
+          title="LinkedIn"
+        >
+          <FaLinkedin size={20} />
+        </a>
+      </div>
     </section>
   );
 };
