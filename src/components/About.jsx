@@ -2,7 +2,7 @@ import React from 'react';
 import profileImage from '../assets/ProfilePicture.jpg';
 
 const About = () => (
-  <section className="my-12 text-white px-4">
+  <section className="my-12 md:my-24 text-white px-4">
     <h2 className="bg-gunmetal-gray text-white text-3xl font-semibold rounded px-4 py-2 mb-6 shadow-sm mx-auto text-center w-fit">
       About Me
     </h2>

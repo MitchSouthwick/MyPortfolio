@@ -19,7 +19,7 @@ const experiences = [
 ];
 
 const Experiences = () => (
-  <section className="my-16 text-white px-4">
+  <section className="my-16 md:my-48 text-white px-4">
     <h2 className="bg-indigo-steel rounded px-4 py-2 mb-6 text-3xl font-semibold text-center mx-auto w-fit">
     Experience
     </h2>
