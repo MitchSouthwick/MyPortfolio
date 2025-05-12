@@ -30,7 +30,7 @@ const Home = () => {
   }, [text, isDeleting, index]);
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-white text-center">
+    <section className="min-h-[100svh] flex flex-col justify-center items-center text-white text-center">
       <h2 className="text-5xl font-bold mb-2">Mitchell Southwick</h2>
       <p className="text-2xl">
         I am a <span className="text-teal-400">{text}</span>
