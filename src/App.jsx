@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './components/About'
@@ -13,6 +14,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <main className="px-2 md:px-20 mx-auto">
         <Routes>
@@ -22,7 +24,7 @@ function App() {
         <div id="about">
           <About />
         </div>
-        <div>
+        <div id="experiences">
           <Experiences />
         </div>
         {/* <div>

@@ -12,8 +12,9 @@ const Header = () => {
       <div className="flex justify-between items-center">
         {/* Desktop nav links */}
         <div className="hidden md:flex space-x-8">
-          <Link to="/" className="hover:text-gray-400">Home</Link>
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-gray-400">Home</Link>
           <a href="#about" className="hover:text-gray-400">About</a>
+          <a href="#experiences" className="hover:text-gray-400">Experiences</a>
           <a href="#contact" className="hover:text-gray-400">Contact</a>
         </div>
 
@@ -37,8 +38,17 @@ const Header = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="flex flex-col mt-4 space-y-3 md:hidden">
-          <Link to="/" onClick={toggleMenu} className="hover:text-gray-400">Home</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            setIsOpen(false); // close the menu
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="hover:text-gray-400"
+        >Home
+        </Link>
           <a href="#about" onClick={toggleMenu} className="hover:text-gray-400">About</a>
+          <a href="#experiences" onClick={toggleMenu} className="hover:text-gray-400">Experiences</a>
           <a href="#contact" onClick={toggleMenu} className="hover:text-gray-400">Contact</a>
           <Link to="/resume" onClick={toggleMenu} className="hover:text-gray-400">Resume</Link>
           <div className="flex space-x-4 mt-2">
