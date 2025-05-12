@@ -10,10 +10,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_3hjt94e', // Replace with your EmailJS service ID
-        'template_qxk373j', // Replace with your EmailJS template ID
+        'service_3hjt94e', // EmailJS service ID
+        'template_qxk373j', // EmailJS template ID
         form.current,
-        'Nhqwur1JyX-mz74LD'   // Replace with your EmailJS public key
+        'Nhqwur1JyX-mz74LD'   // EmailJS public key
       )
       .then(() => {
         setSent(true);
@@ -75,7 +75,7 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="bg-sky-600 hover:bg-sky-500 transition px-6 py-2 rounded text-white font-medium"
+          className="bg-sky-600 hover:bg-sky-500 transition px-6 py-2 rounded text-white font-medium flex justify-self-end"
         >
           Send
         </button>

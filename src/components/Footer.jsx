@@ -20,7 +20,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub"
-          className="hover:text-teal-400 transition-colors"
+          className="hover:text-gray-400 transition-colors"
         >
           <Github size={24} />
         </a>
@@ -31,7 +31,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           title="LinkedIn"
-          className="hover:text-teal-400 transition-colors"
+          className="hover:text-blue-400 transition-colors"
         >
           <Linkedin size={24} />
         </a>
