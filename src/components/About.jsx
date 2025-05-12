@@ -3,7 +3,7 @@ import profileImage from '../assets/ProfilePicture.jpg'; // Make sure you have t
 
 const About = () => (
   <section className="my-12 text-white px-4 md:px-0">
-    <h2 className="bg-gunmetal-gray text-white text-3xl font-semibold rounded-lg px-4 py-2 inline-block mb-4 shadow-sm">
+    <h2 className="bg-gunmetal-gray text-white text-3xl font-semibold rounded px-4 py-2 inline-block mb-4 shadow-sm">
       About Me
     </h2>
     <div className="md:flex md:items-start md:space-x-10">
@@ -12,12 +12,12 @@ const About = () => (
         <img
           src={profileImage}
           alt="Profile"
-          className="rounded-2xl shadow-lg object-cover w-[400px] h-auto"
+          className="rounded shadow-lg object-cover w-[375px] h-auto"
         />
       </div>
 
       {/* Right column: Text Card */}
-      <div className="bg-gunmetal-gray p-6 rounded-xl shadow-md md:w-2/3 text-lg md:text-xl">
+      <div className="bg-gunmetal-gray p-6 rounded shadow-md md:w-2/3 text-lg md:text-xl">
         <p className="mb-4">
           Hello! I'm a passionate developer who loves exploring new technologies.
           I enjoy creating software and learning about the latest trends in software development.

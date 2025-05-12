@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="my-8 text-white bg-charcoal-slate rounded-lg px-6 py-8 shadow-md max-w-3xl mx-auto"
+      className="my-8 text-white bg-charcoal-slate rounded px-6 py-8 shadow-md max-w-3xl mx-auto"
     >
       <h2 className="text-3xl font-semibold mb-4 text-center">Contact Me</h2>
 

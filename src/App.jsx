@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="px-20 mx-auto">
+      <main className="px-2 md:px-20 mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<ResumePage />} />
@@ -28,7 +28,7 @@ function App() {
         {/* <div>
           <Projects />
         </div> */}
-        <div id="contact">
+        <div id="contact" className="px-4 md:px-0">
           <Contact />
         </div>
       </main>
