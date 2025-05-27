@@ -1,5 +1,6 @@
 // src/components/Footer.jsx
 import { Mail, Github, Linkedin, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -37,13 +38,13 @@ const Footer = () => {
         </a>
 
         {/* Resume */}
-        <a
-          href="/resume"
+        <Link
+          to="/resume"
           title="Resume"
           className="hover:text-sky-400 transition-colors"
         >
           <FileText size={24} />
-        </a>
+        </Link>
       </div>
     </footer>
   );
