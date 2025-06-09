@@ -13,7 +13,7 @@ const About = () => (
         <img
           src={profileImage}
           alt="Profile"
-          className="rounded shadow-lg w-72 h-auto mx-auto"
+          className="rounded shadow-lg w-80 h-auto mx-auto"
         />
       </div>
 
